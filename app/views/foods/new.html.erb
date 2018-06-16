@@ -1,0 +1,16 @@
+<span style="font-family:Microsoft JhengHei;">
+  <h1>新增食譜</h1>
+  <%= simple_form_for @food do |f| %>
+    <div class="form-inputs">
+      <%= f.input :name %>
+      <%= f.input :description %>
+      <%= f.input :ingredient %>
+      <%= f.input :step %>
+      <%= f.file_field :image %>
+    </div>
+    <div class="form-actions">
+      <%= f.button :submit %>
+    </div>
+  <% end %>
+  <%= link_to 'Back', foods_path , class: "btn btn-xs btn-secondary float-right"%>
+</span>
