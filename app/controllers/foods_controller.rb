@@ -1,6 +1,6 @@
 class FoodsController < ApplicationController
   
-  before_action :find_by, only:[:show, :edit, :update, :destroy]
+  before_action :set_food, only:[:show, :edit, :update, :destroy]
   load_and_authorize_resource
   
   def index
@@ -41,10 +41,15 @@ class FoodsController < ApplicationController
 end
 
 private
+
+  def set_food
+      @food = Food.friendly.find(params[:id])
+  end
+
   def food_params
     params.require(:food).permit(:name, :description, :ingredient, :step, :image, :user_id)
   end
 
-  def find_by
-     @food = Food.find_by(id: params[:id])
-  end
+  # def find_by
+  #   @food = Food.find_by(id: params[:id])
+  # end
