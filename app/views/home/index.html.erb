@@ -21,12 +21,10 @@
   </a>
 </div>
 
-
 <div class="row ml-2">
   <% @foods.each do |food| %>
     <div class="col-xs-4">
       <div class="card mx-2 my-3" style="width: 350px;">
-
         <div class="card-body">
         <%= link_to image_tag(food.image_url, :width => '300px', :height => '200px'), food if food.image.present?%>
           <h5 class="card-title"><%= link_to food.name, food_path(food) %></h5>
@@ -37,4 +35,5 @@
     </div>
   <% end %>
 </div>
+<%= paginate @foods %>
 </span>
