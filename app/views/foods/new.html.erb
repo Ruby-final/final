@@ -1,4 +1,5 @@
-<span style="font-family:Microsoft JhengHei;">
+<div class="row my-3">
+  <div class="col">
   <h1>新增食譜</h1>
   <%= simple_form_for @food do |f| %>
     <div class="form-inputs">
@@ -8,9 +9,10 @@
       <%= f.input :step %>
       <%= f.file_field :image %>
     </div>
-    <div class="form-actions">
+    <div class="form-actions pt-3">
       <%= f.button :submit %>
+      <%= link_to 'Back', foods_path , class: "btn btn-xs btn-secondary float-right"%>
     </div>
   <% end %>
-  <%= link_to 'Back', foods_path , class: "btn btn-xs btn-secondary float-right"%>
-</span>
+  </div>
+</div>

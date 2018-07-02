@@ -40,6 +40,7 @@ gem 'carrierwave'
 gem 'devise', '~> 4.4', '>= 4.4.3'
 gem 'cancancan', '~> 2.2'
 gem 'friendly_id', '~> 5.2', '>= 5.2.4'
+gem 'kaminari', '~> 1.1', '>= 1.1.1'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false

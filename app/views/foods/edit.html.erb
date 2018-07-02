@@ -1,17 +1,17 @@
-<span style="font-family:Microsoft JhengHei;">
+<div class="my-3">
   <h1>修改食譜</h1>
   <%= simple_form_for @food do |f| %>
-      <div class="form-inputs">
-        <%= f.input :name %>
-        <%= f.input :description %>
-        <%= f.input :ingredient %>
-        <%= f.input :step %>
-        <%= f.file_field :image %>
-      </div>
-      <div class="form-actions">
-        <%= f.button :submit %>
-      </div>
-    <% end %>
-  <%= link_to 'Show', @food , class: "btn btn-xs btn-success float-right mx-3" %>
-  <%= link_to 'Back', foods_path , class: "btn btn-xs btn-secondary float-right" %>
-</span>
+    <div class="form-inputs">
+      <%= f.input :name %>
+      <%= f.input :description %>
+      <%= f.input :ingredient %>
+      <%= f.input :step %>
+      <%= f.file_field :image %>
+    </div>
+    <div class="form-actions pt-3">
+      <%= f.button :submit %>
+      <%= link_to 'Show', @food , class: "btn btn-xs btn-success float-right mx-3" %>
+      <%= link_to 'Back', foods_path , class: "btn btn-xs btn-secondary float-right" %>
+    </div>
+  <% end %>
+</div>
